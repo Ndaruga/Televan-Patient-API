@@ -16,6 +16,7 @@ This Spring Boot application provides a robust and user-friendly interface for m
 
 - **Spring Boot**: Framework for building the application.
 - **PostgreSQL**: Database for storing patient records.
+- **InteliJ**: or an IDE of your choice
 - **HTML/CSS**: Frontend for user interaction.
 - **JavaScript**: For handling API calls and form submissions.
 
@@ -28,11 +29,6 @@ Follow these steps to set up and run the Patient Management System on your local
 - **Java 11 or higher**: Ensure you have Java installed. You can check your Java version by running:
   ```bash
   java -version
-  ```
-
-- **Maven**: Make sure Maven is installed for managing dependencies. Check your Maven version:
-  ```bash
-  mvn -v
   ```
 
 ### Clone the Repository
@@ -51,12 +47,12 @@ You need a PostgreSQL database set up. Download and install PostgreSQL from [Pos
 1. **Download PostgreSQL**: Visit the [PostgreSQL Downloads page](https://www.postgresql.org/download/) and choose the installer for your operating system.
 2. **Install PostgreSQL**: Follow the installation instructions provided on the site. Make sure to remember the username and password you set during installation.
 
-### Exposing PostgreSQL to the Internet with ngrok
+### Exposing PostgreSQL to the Internet with ngrok (Optional)
 
 To expose your PostgreSQL database to the internet for testing purposes, you can use [ngrok](https://ngrok.com/):
 
 1. **Download ngrok**: Go to the [ngrok website](https://ngrok.com/download) and download the appropriate version for your operating system.
-2. **Install ngrok**: Follow the installation instructions on the ngrok website.
+2. **Install ngrok**: Follow the installation instructions on the ngrok website, including getting your Auth token.
 3. **Expose PostgreSQL**: Run the following command in your terminal, replacing `5432` with your PostgreSQL port if different:
    ```bash
    ngrok tcp 5432
@@ -79,7 +75,7 @@ spring.application.name=telvan
 server.port=5500
 
 # JPA and Hibernate Settings
-spring.jpa.hibernate.ddl-auto=update  # Change to 'create' for testing but will drop existing data
+spring.jpa.hibernate.ddl-auto=update
 spring.datasource.driver-class-name=org.postgresql.Driver
 
 # Database Connection Details
@@ -94,18 +90,7 @@ spring.jpa.show-sql=true
 
 ### Running the Application
 
-To run the application, navigate to the root directory of the project and execute the following command:
-
-```bash
-mvn spring-boot:run
-```
-
-Alternatively, you can build the project into a JAR file and run it:
-
-```bash
-mvn clean package
-java -jar target/patient-management-system-0.0.1-SNAPSHOT.jar
-```
+To run the application, navigate to the root directory of the project and click the run button to execute the app.
 
 ### Accessing the Application
 
@@ -135,16 +120,10 @@ Contributions are welcome! If you have suggestions for improvements or new featu
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contact
-
-For any questions or feedback, please reach out to:
-
-- **Your Name**: [your.email@example.com](mailto:your.email@example.com)
-
 ---
 
-Thank you for using the Patient Management System! We hope it helps you manage patient records efficiently. Happy coding!
+Thank you for using the System! 
+
+Happy coding😊😊 !
 
 --- 
-
-This README now includes detailed instructions for downloading PostgreSQL, exposing it with ngrok, and running the `users.sql` file to populate the database with dummy data. Feel free to customize any sections further to better fit your project's needs!
